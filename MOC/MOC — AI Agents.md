@@ -33,9 +33,9 @@
 - [[Agent_13_Career_LinkedIn_Agent]] — LinkedIn optimization, recruiter/HM outreach, job pipeline tracking (ChatGPT + Grok + Perplexity)
 
 ## Agent Files — Expansion Roster (14–20: Gemini, Grok, Claude)
-- **Agent 14 — Healthcare Compliance & CCM Agent** (Claude) — HIPAA-aware compliance, CCM/TCM billing, risk assessments, grant eligibility for Emperious. *Owned by Claude; local file not yet backfilled.*
-- **Agent 15 — Lead Generation & Qualification Agent** (Grok) — Prospect research/qualification, outreach, call booking for Praxis HQ. *Owned by Grok; local file not yet backfilled.*
-- **Agent 16 — Funding & Grant Researcher** (Gemini) — PA/HRSA/NIH/foundation opportunity hunting, application prep, financial modeling. *Owned by Gemini; local file not yet backfilled.*
+- [[Agent_14_Healthcare_Compliance_CCM_Agent]] — HIPAA-aware compliance, CCM/TCM billing, risk assessments, grant eligibility screening for Emperious (Claude). Eligibility gate for Agent 16.
+- [[Agent_15_Lead_Generation_Qualification_Agent]] — Prospect research/qualification, outreach, call booking for Praxis HQ (Grok). Requests research via Agent 03.
+- [[Agent_16_Funding_Grant_Researcher]] — PA/HRSA/NIH/foundation opportunity hunting, application prep, financial modeling (Gemini). Requests research via Agent 03; routes Emperious opportunities through Agent 14 first.
 - [[Agent_17_Content_Video_Production_Coordinator]] — Chibi 3D video production (Grok) — script, Grok Imagine, Eleven Labs, ffmpeg. Self-QA, then hands off to Agent 19.
 - [[Agent_18_Bulk_Context_Ingestion_Engine]] — Bulk log/repo/dataset compression (Gemini, 2M context) → feeds Agent 11. Zero memory-write authority.
 - [[Agent_19_Multimodal_Asset_Rigging_QA]] — Mandatory video/asset QA gate between Agent 17 and Agent 10 (Gemini Vision/Video).
@@ -61,9 +61,12 @@
 - Cross-platform roster expansion from 13 → 23 agents + Codex execution layer, with full scope negotiation across Gemini, Grok, Perplexity, and ChatGPT/Codex (2026-07-09)
 
 ## Next Up
-- Backfill local agent files for 14, 15, 16 (currently Grok/Gemini/Claude-side only)
-- Resolve stale duplicate agent-file copies in `Obsidian-Queue/claude-projects/` (see Home.md structural flags)
-- Reconnect Notion so Agent 11 can resume canonical writes (currently unauthorized in this session)
+- Reconnect Notion so Agent 11 can resume canonical writes (currently unauthorized in this session — see Home.md for reauthorization steps)
+
+## Resolved 2026-07-10
+- Backfilled local agent files for 14, 15, 16
+- Archived stale duplicate agent-file copies from `Obsidian-Queue/claude-projects/` to `_Archive/` and fixed the sync script so it won't regenerate the duplicate
+- Fixed `aria_obsidian_sync.py`'s LLM export inbox to work from both Cowork sandbox sessions and local Mac runs
 
 ## Related
 - [[Identity/USER]] — how KP delegates

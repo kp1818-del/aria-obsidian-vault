@@ -1,6 +1,6 @@
 # 🏠 Home — Second Brain Dashboard
 
-> *Last updated: 2026-06-28*
+> *Last updated: 2026-07-09*
 
 ---
 
@@ -25,7 +25,9 @@
 ---
 
 ## 📅 Daily Notes
-- [[Daily/2026-06-28|Today]]
+- [[Daily/2026-07-09|Today]]
+- [[Daily/2026-06-29|2026-06-29]]
+- [[Daily/2026-06-28|2026-06-28]]
 
 ---
 
@@ -42,11 +44,16 @@
 - [[Areas/Brand Positioning|Brand Positioning]] — Praxis.ai vs Axiom.ai decision
 
 ## 🔥 Active Projects
-- ARIA 3-Agent Workflow System
-- Obsidian Second Brain Setup (vault files ready to copy in)
+- ARIA 23-Agent Multi-Platform System (Claude, ChatGPT, Gemini, Grok, Perplexity, + Codex execution layer)
 - Praxis HQ Marketing Automation
 - Emperious Healthcare PA Market Entry
-- VSS Provider Enrichment (resume from row 771)
+- VSS Provider Enrichment (resume from row 876)
+
+## ⚠️ Needs KP Decision
+- Duplicate/stale agent-file copies in `Obsidian-Queue/claude-projects/` (frozen at Agent 12, pre-dates current 23-agent roster) — reconcile or archive
+- Notion connector not currently authorized in Cowork session — Agent 11 cannot write canonical Notion records until reconnected
+- Local sync automation (`aria_obsidian_sync.py`) cannot reach `~/Downloads/LLM-Exports/` from the sandbox — needs to run from an environment with local filesystem access, or exports should be dropped directly into the connected AI Learning Hub folder
+- Agents 14, 15, 16 exist only on Grok/Gemini/Claude side — no local `.md` file backfilled yet
 
 ---
 

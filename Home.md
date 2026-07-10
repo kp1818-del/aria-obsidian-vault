@@ -1,6 +1,6 @@
 # 🏠 Home — Second Brain Dashboard
 
-> *Last updated: 2026-07-09*
+> *Last updated: 2026-07-10*
 
 ---
 
@@ -49,11 +49,14 @@
 - Emperious Healthcare PA Market Entry
 - VSS Provider Enrichment (resume from row 876)
 
-## ⚠️ Needs KP Decision
-- Duplicate/stale agent-file copies in `Obsidian-Queue/claude-projects/` (frozen at Agent 12, pre-dates current 23-agent roster) — reconcile or archive
-- Notion connector not currently authorized in Cowork session — Agent 11 cannot write canonical Notion records until reconnected
-- Local sync automation (`aria_obsidian_sync.py`) cannot reach `~/Downloads/LLM-Exports/` from the sandbox — needs to run from an environment with local filesystem access, or exports should be dropped directly into the connected AI Learning Hub folder
-- Agents 14, 15, 16 exist only on Grok/Gemini/Claude side — no local `.md` file backfilled yet
+## ✅ Resolved 2026-07-10
+- **Duplicate agent files** — the stale `Obsidian-Queue/claude-projects/` folder (frozen at Agent 12, plus a confusing nested copy of the whole vault tree) was archived to `_Archive/claude-projects_ARCHIVED_2026-07-10/` — not deleted, just moved out of the way. Root cause fixed too: `aria_obsidian_sync.py`'s `sync_claude_projects()` was sweeping vault files into the queue as a side effect; it now explicitly skips `Obsidian_Vault_Files/` and `_Archive/`, so this won't recur on the next sync run.
+- **Sync script Downloads gap** — `aria_obsidian_sync.py` only checked `~/Downloads/LLM-Exports/`, which resolves to a sandbox home directory (not KP's Mac) when run from Cowork. It now checks a new `LLM-Exports-Inbox/` folder inside AI Learning Hub first (reachable from both Cowork and locally), then falls back to the original Downloads path for local runs. Drop LLM exports in either place going forward.
+- **Agents 14, 15, 16 backfilled** — `Agent_14_Healthcare_Compliance_CCM_Agent.md`, `Agent_15_Lead_Generation_Qualification_Agent.md`, and `Agent_16_Funding_Grant_Researcher.md` now exist as full local contracts matching the standard ARIA agent format, including the Agent 03 research-dispatch pattern and a new eligibility-gate relationship between Agent 16 and Agent 14 for Emperious-related funding opportunities.
+
+## ⚠️ Still Needs KP Action
+- **Notion connector not authorized in Cowork session.** This requires your own login — Cowork can't complete OAuth on its own. Go to claude.ai → Settings → Connectors, find Notion, and reauthorize. Once done, Agent 11 can resume writing canonical Notion records alongside Obsidian.
+- These vault files were pushed to GitHub via direct upload (not the local obsidian-git plugin) — pull/sync in your Obsidian app to bring today's changes down locally.
 
 ---
 
